@@ -66,7 +66,7 @@
 (def scrolltable (saw/scrollable table))
 
 (defn get_lines
-  "Get lines from lines from file"
+  "Get lines from file"
   [file]
   (try
     (clojure.string/split-lines (slurp (io/file file)))
@@ -74,9 +74,9 @@
       (seq []))))
 
 (defn get_all_entries
-  "Get all entries from subs"
+  "Get all entries from subs, separate comments from urls"
   [subs]
-  (mapcat ytrss-client.getfeed/getFeedFromAddress subs))
+  (mapcat #(ytrss-client.getfeed/getFeedFromAddress (first (clojure.string/split %1 #" #"))) subs))
 
 (defn updateTable
   "Fetch all from database and put it to table sorted by datetime."

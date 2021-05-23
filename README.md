@@ -13,7 +13,7 @@ Project is build with Leiningen.
 To run program use `lein run` or you can build uberjar with `lein uberjar`.
 
 ## Download
-You can download jar file from [here](https://github.com/soukev/ytrss-client/releases/tag/Release).
+You can download jar file from [here](https://github.com/soukev/ytrss-client/releases/tag/v0.1.0).
 
 Run jar file with:
 

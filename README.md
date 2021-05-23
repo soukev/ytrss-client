@@ -45,3 +45,10 @@ https://www.youtube.com/feeds/videos.xml?channel_id=ID
 ```
 
 Insert this RSS feed url into `subs.conf`, run app and update with `u` key.
+
+You can also add comments to subscriptions in `subs.conf` like so:
+
+```
+https://www.youtube.com/feeds/videos.xml?channel_id=ID # Some Channel
+```
+

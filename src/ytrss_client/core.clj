@@ -76,7 +76,7 @@
 (defn get_all_entries
   "Get all entries from subs, separate comments from urls"
   [subs]
-  (mapcat #(ytrss-client.getfeed/getFeedFromAddress (first (clojure.string/split %1 #" #"))) subs))
+  (mapcat #(ytrss-client.getfeed/getFeedFromAddress (first (clojure.string/split %1 #" +#"))) subs))
 
 (defn updateTable
   "Fetch all from database and put it to table sorted by datetime."
